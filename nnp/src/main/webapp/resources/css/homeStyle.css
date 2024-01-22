@@ -1,9 +1,9 @@
 @charset "UTF-8";
-
+/*header*/
 li{
 	list-style:none;
 }
-li>a{
+a{
 	color:black;
 	text-decoration: none;
 }
@@ -12,6 +12,9 @@ li>a{
 	max-width:1200px;
 	height:150px;
 	z-index:100;
+}
+.head>a>img{
+	height:80px;
 }
 .header{
 	display:flex;
@@ -35,6 +38,7 @@ li>a{
 }
 .head{
 	display:flex;
+	justify-content:space-between;
 }
 .searchBox{
 	margin-top:auto;
@@ -56,6 +60,9 @@ li>a{
 	max-width:100px;
 	min-width:100px;
 }
+.login{
+	font-size:0.8em;
+}
 
 /*article*/
 article{
@@ -71,13 +78,18 @@ article{
 }
 
 /*img wrap and slide(5/15)*/
-.rank{
+.rank, .newProduct{
 	display:flex;
+	margin-bottom:150px;
 }
 .productItem>img{
 	width:250px;
 	height:250px;
 	margin-bottom:15px;
+	transition: transform 0.3s ease-in-out;
+}
+.productItem>img:hover{
+	transform: scale(1.1);
 }
 #mainImgs{
 	display:flex;
@@ -85,16 +97,16 @@ article{
 }
 .imgWrap{
 	display:flex;
-	transition : transform 0.5s ease-in-out;
+	transition : transform 0.05s ease-in-out;
 }
 .productItem{
 	/*
 	margin-left:17px;
 	margin-right:17px;
 	*/
-	margin : 0 17;
+	margin : 0 16;
 }
-.rank>button{
+.pageButton{
 	font-size:2em;
 	color:gray;
 	background-color:white;
@@ -105,7 +117,94 @@ article{
 	border:none;
 	margin:auto 0;
 }
-.rank>button:hover{
+.pageButton:hover{
 	corsor:pointer;
 	color:FF90BC;
+}
+.rank .newProduct{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+/*review*/
+.review{
+	display:flex;
+	margin-bottom:150px;
+}
+.reviewBox{
+	margin-left:5px;
+	margin-right:5px;
+}
+.profile{
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:10px;
+}
+.profile>li{
+	font-size:0.8em;
+}
+.reviewTitle{
+	font-weight:bold;
+	margin-bottom:8px;	
+}
+.reviewBox{
+	width:250px;
+	height:150px;
+	padding:15px;
+	background-color:#EEEEEE;
+	border-radius:10px;
+}
+.reviewContent{
+	font-size:0.9em;
+	color:gray;
+	margin-bottom:10px;
+	height:60px;
+	overflow:hedden;
+}
+.reviewProduct{
+	font-size:0.9em;
+	font-weight:bold;
+	bottom:0;
+}
+/*footer*/
+.footerTop{
+	width:100%;
+	background-color:FF90BC;
+}
+.footerTop>div{
+	padding-left:50px;
+	padding-right:50px;
+	padding-bottom:20px;
+	margin: 0 auto;
+}
+.footerTop-Content{
+	justify-content: center;
+	display:flex;
+	margin : 10 auto;
+}
+.benefit{
+	padding-left:200px;
+	padding-top:50px;
+	color:white;
+	text-shadow: 0px 3px 3px gray;
+}
+.shadow{
+	font-size:1.4em;
+	color:white;
+	text-shadow: 0px 3px 3px gray;
+	padding-left:20px;
+	padding-right:20px;
+	margin-bottom:20px;
+	text-align:center;
+}
+.rightLine{
+	border-right:2px solid white;
+}
+.footerBottom{
+	height:100px;
+	background-color:F1F1F1;
+}
+.footerBottom>h3{
+	width:100px;
+	padding-top:40px;
+	margin : auto;
 }
